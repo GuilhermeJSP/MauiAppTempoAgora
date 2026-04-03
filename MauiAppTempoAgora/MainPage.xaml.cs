@@ -1,5 +1,6 @@
 ﻿using MauiAppTempoAgora.Models;
 using MauiAppTempoAgora.Services;
+using System.Diagnostics;
 
 namespace MauiAppTempoAgora
 {
@@ -41,6 +42,7 @@ namespace MauiAppTempoAgora
                                       $"&lon={t.lon.ToString().Replace(",", ".")}";
 
                         wv_mapa.Source = mapa;
+                        Debug.WriteLine(mapa);
                     }
                     else
                     {
@@ -60,7 +62,7 @@ namespace MauiAppTempoAgora
             }
         }
 
-       /* private async void Button_Clicked_Localizacao(object sender, EventArgs e)
+       /* */private async void Button_Clicked_Localizacao(object sender, EventArgs e)
         {
             try
             {
@@ -120,6 +122,6 @@ namespace MauiAppTempoAgora
                 await DisplayAlert("Erro: Obtenção do nome da Cidade", ex.Message, "OK");
             }
             
-        }*/
+        }
     }
 }
